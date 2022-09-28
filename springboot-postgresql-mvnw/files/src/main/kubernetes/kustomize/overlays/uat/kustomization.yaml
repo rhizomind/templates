@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../../base
+
+images:
+  - name: docker-releases.internal.solidify.pl/{{space}}/{{artifactId}}:latest
+    newTag: "@VERSION@"
+
+configMapGenerator:
+- name: wam-service-envs
+  env: config-envs.properties
+  behavior: merge
+
+secretGenerator:
+- name: wam-service-secrets
+  env: config-secrets.properties
+  behavior: merge

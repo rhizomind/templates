@@ -1,0 +1,17 @@
+---
+name: Maven, Java 8, Spring Boot
+version: '1.0'
+description: Backend project that uses Maven, Java 8, Spring Boot
+tags:
+  - backend,
+  - maven,
+  - java,
+  - spring
+parameters:
+  schema: ./parameters-schema.json
+  defaults: ./parameters-defaults.yaml
+
+excludeFromProcessingRegexps:
+  - .*jar
+engine: qa-engine-mustache:latest
+

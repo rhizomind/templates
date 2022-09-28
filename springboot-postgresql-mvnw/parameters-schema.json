@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "artifactName": {
+      "type": "string",
+      "title": "Long name of the artifact",
+      "form": true
+    },
+    "artifactId": {
+      "type": "string",
+      "title": "Id of the artifact; name of a .jar file and dockerimage",
+      "form": true
+    },
+    "groupId": {
+      "type": "string",
+      "title": "groupId",
+      "form": true
+    },
+    "artifactVersion": {
+      "type": "string",
+      "title": "version",
+      "form": true
+    },
+    "space": {
+      "type": "string",
+      "title": "Rhizomind platform space name",
+      "form": true
+    },
+    "java-package": {
+      "type": "string",
+      "title": "package",
+      "form": true
+    }
+  }
+}
