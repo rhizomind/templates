@@ -5,6 +5,7 @@ genericBuildPipeline {
 
     useTemplate('rzm-lib-mvnw') {
         properties {
+            space = '{{space}}'
             validate = [
                 checkstyle: [
                     enabled: true
@@ -19,7 +20,7 @@ genericBuildPipeline {
     stages {
         _package {
             dockerBuild {
-                imageName 'qa-templates/{{artifactId}}'
+                imageName '{{space}}/{{artifactId}}'
                 dockerfileLocation './src/main/docker/Dockerfile'
                 contextDir './target'
             }
@@ -27,7 +28,7 @@ genericBuildPipeline {
 
         install {
             dockerPush {
-                imageName 'qa-templates/{{artifactId}}'
+                imageName '{{space}}/{{artifactId}}'
                 registry 'docker-releases.internal.solidify.pl'
             }
         }
