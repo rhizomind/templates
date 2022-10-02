@@ -1,0 +1,18 @@
+---
+name: Maven, Java 8, picocli, graalvm
+version: '1.0'
+description: GraalVM enabled picocli app
+tags:
+  - backend,
+  - maven,
+  - java,
+  - picocli
+  - graalvm
+parameters:
+  schema: ./parameters-schema.json
+  defaults: ./parameters-defaults.yaml
+
+excludeFromProcessingRegexps:
+  - .*jar
+engine: qa-engine-mustache:latest
+
