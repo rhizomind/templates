@@ -1,4 +1,4 @@
-import {Col, Row, Card, Button} from "react-bootstrap";
+import {Col, Row, Card, Button} from 'react-bootstrap';
 import editing from './assets/img/icons/spot-illustrations/21.png';
 
 export default function Home() {
@@ -19,5 +19,5 @@ export default function Home() {
                 </Card.Body>
             </Card>
         </>
-    )
+    );
 }
