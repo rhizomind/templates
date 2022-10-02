@@ -1,0 +1,5 @@
+groupId: quickapp
+artifactId: mhal-template
+artifactVersion: 0.1
+space: quickapp
+gitConfigDir: git

@@ -1,0 +1,18 @@
+---
+name: Rhizomind Must-have-all-libs
+version: '0.1'
+description: 'Frontend must-have-all-libs projects: react, TS, bootstrap, jest, playwright, prettier, docker'
+tags:
+  - frontend,
+  - npm,
+  - typescript,
+  - react
+  - bootstrap
+parameters:
+  schema: ./parameters-schema.json
+  defaults: ./parameters-defaults.yaml
+excludeFromProcessingRegexps:
+  - .*(jar|png|svg|ico)$
+  - \.git\/.*$
+engine: qa-engine-cra:latest
+

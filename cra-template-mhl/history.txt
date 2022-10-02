@@ -1,0 +1,24 @@
+  743  npm install playwright
+  744  npm install @playwright/test
+  748  npm set-script prepare "husky install"
+  750  npm install husky --save-dev
+  755  npm install --save-dev react-test-renderer
+  762  npm install --save-dev ts-jest
+  760  npm install --save-dev jest-junit
+  761  npm install --save-dev jest-sonar
+  768  npm install --save-dev jest-environment-jsdom
+  777  npm install --save-dev jest
+  780  npm install --save-dev babel-jest @babel/core @babel/preset-env
+  781  npm install --save-dev @babel/preset-typescript
+  782  npm install --save-dev @babel/preset-react
+  786  npm install --save-dev @babel/plugin-transform-runtime
+  788  npm i -D jest-svg-transformer
+  795  npm i -D msw
+  796  npm i react-query
+  809  npm i --save react-bootstrap bootstrap
+  810  npm i --save @types/react-bootstrap
+  812  npm i --save sass
+  814  npm i bootstrap
+  820  npm i -D --save-dev eslint
+  821  npm i -D --save-dev prettier
+  822  npx mrm@2 lint-staged
