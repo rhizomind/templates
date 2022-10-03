@@ -1,0 +1,19 @@
+---
+name: Springboot hexagonal multimodule
+version: '1.0'
+description: Multimodule template for HEXagonal springboot app with REST & JPA
+tags:
+  - backend,
+  - maven,
+  - java,
+  - spring,
+  - hexagonal
+  - multimodule
+parameters:
+  schema: ./parameters-schema.json
+  defaults: ./parameters-defaults.yaml
+
+excludeFromProcessingRegexps:
+  - .*jar
+engine: qa-engine-mustache:latest
+

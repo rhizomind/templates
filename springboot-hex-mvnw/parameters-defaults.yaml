@@ -1,0 +1,6 @@
+artifactId: test-component
+groupId: com.rhizomind.quickapp
+artifactVersion: 0.1-SNAPSHOT
+space: quickapp
+java-package: com.rhizomind.quickapp
+artifactName: Test Component for chacking if cli works

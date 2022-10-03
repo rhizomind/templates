@@ -1,0 +1,21 @@
+@Library('CIDD') _
+
+
+genericBuildPipeline {
+
+    useTemplate('rzm-ms-mvnw') {
+        properties {
+            space = '{{space}}'
+            serviceName = '{{artifactId}}'
+        }
+        features {
+            enable {
+            }
+            disable {
+                ds {}
+            }
+        }
+    }
+
+
+}

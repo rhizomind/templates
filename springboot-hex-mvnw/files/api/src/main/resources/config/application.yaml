@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  tomcat:
+    threads:
+      max: 10
+    accept-count: 10
+    mbeanregistry:
+      enabled: true
+
+wam-service:
+  default-redirect-after-login: ""
+  oauth:
+    client-id: <invalid_client_id>
+    client-secret: <invalid_secret>
+    self-auth-endpoint-url: <invalid_endpoint>
+    issuer-manifest-url: <invalid_manifest_url>
+
+spring:
+  application:
+    name: test-component
+  datasource:
+    url: <invalid_url>
+    username: <invalid_username>
+    password: <invalid_password>
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 5
+      keepalive-time:  30000
+      max-lifetime: 60000
+  liquibase:
+    default-schema: public
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
