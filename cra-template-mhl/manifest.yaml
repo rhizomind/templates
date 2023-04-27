@@ -8,11 +8,11 @@ tags:
   - typescript,
   - react
   - bootstrap
-parameters:
+engine: qa-engine-cra:latest
+values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 excludeFromProcessingRegexps:
   - .*(jar|png|svg|ico)$
   - \.git\/.*$
-engine: qa-engine-cra:latest
 
