@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{artifactId}}
+  labels:
+    prometheus_monitoring: "true"
+spec:
+  ports:
+    - name: api
+      port: 8080
+      protocol: TCP
+      targetPort: api
+    - name: wam
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    - name: monitoring
+      port: 9090
+      protocol: TCP
+      targetPort: monitoring

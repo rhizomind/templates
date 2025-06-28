@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: "postgres:16-alpine"
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER={{artifactId}}
+      - POSTGRES_PASSWORD={{artifactId}}
+      - POSTGRES_DB={{artifactId}}
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 8432:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.pl
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    links:
+      - postgres
+  rabbitmq:
+    image: rabbitmq:3.12.4-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin

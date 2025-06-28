@@ -1,0 +1,63 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    threads:
+      max: 10
+    accept-count: 20
+    mbeanregistry:
+      enabled: true
+    max-connections: 40
+  compression:
+    enabled: true
+
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: <invalid_uri>
+  application:
+    name: {{artifactId}}
+  rabbitmq:
+    addresses: <invalid>
+  datasource:
+    url: <invalid_url>
+    username: <invalid_username>
+    password: <invalid_password>
+    hikari:
+      idle-timeout: 20000     # ms in Hikari; ?? in spring
+      max-lifetime: 60000     # ms in Hikari; ?? in spring
+
+      maximum-pool-size: 12
+      minimum-idle: 0
+
+      keepalive-time: 0   # ms in Hikari; ?? in spring
+      connection-timeout: 2000 # ms in Hikari; ?? in spring
+  liquibase:
+    default-schema: public
+    change-log: classpath:/db/db.changelog-master.xml
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      location: /tmp
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}

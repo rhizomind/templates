@@ -1,15 +1,10 @@
 ---
-name: Maven, Java 8, picocli, graalvm
+name: Maven, Java 8, Spring Boot
 version: '1.0'
-description: GraalVM enabled picocli app
-tags:
-  - backend,
-  - maven,
-  - java,
-  - picocli
-  - graalvm
+description: Backend project that uses Maven, Java 8, Spring Boot 2
+tags: [ 'backend', 'maven', 'java', 'springboot' ]
 
-parameters:
+values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 

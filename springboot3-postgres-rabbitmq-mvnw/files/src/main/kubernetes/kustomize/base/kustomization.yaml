@@ -1,0 +1,19 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  app: {{artifactId}}
+
+configMapGenerator:
+- name: {{artifactId}}-envs
+  env: config-envs.properties
+
+secretGenerator:
+- name: {{artifactId}}-secrets
+  env: config-secrets.properties
+
+resources:
+- resource-deployments.yaml
+- resource-service.yaml
+- resource-hpa.yaml

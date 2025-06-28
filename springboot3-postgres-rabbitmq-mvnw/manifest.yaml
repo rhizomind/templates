@@ -1,7 +1,7 @@
 ---
 name: Maven, Java 8, Spring Boot
 version: '1.0'
-description: Backend project that uses Maven, Java 8, Spring Boot
+description: Backend project that uses Maven, Java 8, Spring Boot 3, PostgreSQL, RabbitMQ
 tags: [ 'backend', 'maven', 'java', 'springboot' ]
 
 values:

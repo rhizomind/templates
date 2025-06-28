@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{artifactId}}
+spec:
+  template:
+    metadata:
+      annotations:
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "9090"
+        prometheus.io/scrape: "true"
+      labels:
+        deploysphere_health: "true"
+    spec:
+      imagePullSecrets:
+        - name: docker-registry-credentials
+      containers:
+        - name: {{artifactId}}
+          image: {{account}}-{{space}}-docker.dspr.deploy-sphere.cloud/{{artifactId}}:latest
+          imagePullPolicy: Always
+          ports:
+            - name: api
+              containerPort: 8080
+              protocol: TCP
+            - name: monitoring
+              containerPort: 9090
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: {{artifactId}}-envs
+            - secretRef:
+                name: {{artifactId}}-secrets
+          env:
+            - name: RAMPercentage
+              value: "40"
+          resources:
+            limits:
+              cpu: "4"
+              memory: 512Mi
+            requests:
+              cpu: 10m
+              memory: 512Mi
+          livenessProbe:
+            httpGet:
+              path: /actuator/info
+              port: 9090
+            periodSeconds: 10
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /actuator/info
+              port: 9090
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3

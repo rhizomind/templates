@@ -1,0 +1,33 @@
+fortuna:
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak.test.solidify.pl/realms/spreadium_dev/
+  rabbitmq:
+    addresses: amqp://admin:admin@localhost
+  datasource:
+    url: jdbc:postgresql://localhost:5432/{{artifactId}}
+    username: {{artifactId}}
+    password: {{artifactId}}
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
