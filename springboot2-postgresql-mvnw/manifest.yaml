@@ -9,6 +9,6 @@ values:
   defaults: ./parameters-defaults.yaml
 
 engine:
-  image: qa-engine-mustache:latest
+  image: mustache-cli:latest
   args:
     - --exclude-regexp=.*jar

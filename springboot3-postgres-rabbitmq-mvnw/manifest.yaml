@@ -8,7 +8,8 @@ values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 
-engine: qa-engine-mustache:latest
-excludeFromProcessingRegexps:
-  - .*jar
+engine:
+  image: mustache-cli:local
+  args:
+    - --exclude=.*jar
 

@@ -9,11 +9,17 @@ tags:
   - picocli
   - graalvm
 
-parameters:
+values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 
-engine:
-  image: qa-engine-mustache:latest
-  args:
-    - --exclude-regexp=.*jar
+
+engine: qa-engine-mustache:latest
+excludeFromProcessingRegexps:
+  - .*jar
+
+#engine:
+#  image: qa-engine-mustache:latest
+#  args:
+#    - --exclude-regexp=.*jar
+#    - --exclude-regexp=.*png
