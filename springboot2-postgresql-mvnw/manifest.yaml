@@ -9,6 +9,7 @@ values:
   defaults: ./parameters-defaults.yaml
 
 engine:
-  image: mustache-cli:latest
+  image: mustache-cli:local
   args:
-    - --exclude-regexp=.*jar
+    - --exclude=.*jar
+

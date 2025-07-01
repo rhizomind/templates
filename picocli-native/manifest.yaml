@@ -13,13 +13,7 @@ values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 
-
-engine: qa-engine-mustache:latest
-excludeFromProcessingRegexps:
-  - .*jar
-
-#engine:
-#  image: qa-engine-mustache:latest
-#  args:
-#    - --exclude-regexp=.*jar
-#    - --exclude-regexp=.*png
+engine:
+  image: mustache-cli:local
+  args:
+    - --exclude=.*jar
