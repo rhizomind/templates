@@ -1,0 +1,20 @@
+---
+name: NestJS starter
+version: '0.1.0'
+description: 'NestJs must-have-all-libs projects: nestjs, TS, jest, prettier, docker'
+tags:
+  - api
+  - frontend,
+  - npm,
+  - typescript,
+  - nestjs
+values:
+  schema: ./parameters-schema.json
+  defaults: ./parameters-defaults.yaml
+
+engine:
+  image: mustache-cli:local
+  args:
+    - --exclude=".*(jar|png|svg|ico)$"
+    - --exclude="\.git\/.*$"
+

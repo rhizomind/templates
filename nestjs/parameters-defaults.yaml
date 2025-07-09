@@ -1,0 +1,7 @@
+groupId: quickapp
+artifactId: mhal-template
+artifactVersion: 0.1
+account: solidify
+space: quickapp
+gitConfigDir: git
+description: Nest TypeScript starter repository
