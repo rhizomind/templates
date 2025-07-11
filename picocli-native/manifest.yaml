@@ -1,6 +1,6 @@
 ---
-name: Maven, Java 8, picocli, graalvm
-version: '1.0'
+name: picocli-graalvm
+version: '1.0.0'
 description: GraalVM enabled picocli app
 tags:
   - backend,

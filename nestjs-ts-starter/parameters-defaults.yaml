@@ -1,6 +1,7 @@
 groupId: quickapp
-artifactId: mhal-template
-artifactVersion: 0.1
+artifactName: Must-has-all-libs starter for nestjs based component
+artifactId: nextjs-starter
+artifactVersion: "0.1"
 account: solidify
 space: quickapp
 gitConfigDir: git

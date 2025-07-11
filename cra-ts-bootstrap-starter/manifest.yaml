@@ -1,13 +1,13 @@
 ---
-name: NestJS starter
-version: '0.1.0'
-description: 'NestJs must-have-all-libs projects: nestjs, TS, jest, prettier, docker'
+name: cra-ts-bootstrap-starter
+version: '0.1'
+description: 'Frontend must-have-all-libs projects: react, TS, bootstrap, jest, playwright, prettier, docker'
 tags:
-  - api
   - frontend,
   - npm,
   - typescript,
-  - nestjs
+  - react
+  - bootstrap
 values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
