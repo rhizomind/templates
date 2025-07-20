@@ -1,0 +1,20 @@
+---
+name: javalin-mvnw-jdk21-starter
+version: '1.0'
+description: A lightweight REST API template built with Javalin, Jackson, and Java 21. Provides
+  asynchronous endpoints for efficient JSON serialization/deserialization, ideal for microservices,
+  rapid prototyping, and prepared for GraalVM native image compilation.
+tags: [ 'backend', 'maven', 'java', 'javalin', 'graalvm', 'native-image' ]
+
+values:
+  schema: ./parameters-schema.json
+  defaults: ./parameters-defaults.yaml
+
+generator:
+  image: mustache-cli:local
+  args:
+    - --exclude=.*jar
+
+validator:
+  image: openjdk:21
+  command: ./mvnw clean install

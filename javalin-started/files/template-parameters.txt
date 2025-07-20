@@ -1,0 +1,7 @@
+groupId: {{groupId}}
+artifactId: {{artifactId}}
+artifactName: {{artifactName}}
+artifactVersion: {{artifactVersion}}
+account: {{account}}
+space: {{space}}
+java-package: {{java-package}}

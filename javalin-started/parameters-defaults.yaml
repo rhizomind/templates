@@ -1,0 +1,7 @@
+artifactId: test-component
+groupId: com.rhizomind.quickapp
+artifactVersion: 0.1-SNAPSHOT
+account: solidify
+space: qa
+java-package: com.rhizomind.quickapp
+artifactName: Lightweight API server
