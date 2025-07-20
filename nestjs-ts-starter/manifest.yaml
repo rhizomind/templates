@@ -12,7 +12,7 @@ values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 
-engine:
+generator:
   image: mustache-cli:local
   args:
     - --exclude=".*(jar|png|svg|ico)$"

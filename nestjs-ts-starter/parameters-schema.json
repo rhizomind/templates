@@ -20,11 +20,11 @@
     },
     "account": {
       "type": "string",
-      "title": "Rhizomind platrequired account name"
+      "title": "Rhizomind platform account name"
     },
     "space": {
       "type": "string",
-      "title": "Rhizomind platrequired space name"
+      "title": "Rhizomind platform space name"
     },
     "description": {
       "type": "string",

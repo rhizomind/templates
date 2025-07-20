@@ -1,5 +1,5 @@
 ---
-name: Maven, Java 8, Spring Boot
+name: springboot2-postgresql-mvnw
 version: '1.0'
 description: Backend project that uses Maven, Java 8, Spring Boot 2
 tags: [ 'backend', 'maven', 'java', 'springboot' ]
@@ -8,7 +8,7 @@ values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 
-engine:
+generator:
   image: mustache-cli:local
   args:
     - --exclude=.*jar

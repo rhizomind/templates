@@ -1,5 +1,5 @@
 ---
-name: Springboot hexagonal multimodule
+name: springboot2-hex-mvnw
 version: '1.0'
 description: Multimodule template for HEXagonal springboot 2 app with REST & JPA
 tags: [ 'backend', 'maven', 'java', 'springboot', 'hexagonal', 'multimodule' ]
@@ -8,7 +8,7 @@ values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 
-engine:
+generator:
   image: mustache-cli:local
   args:
     - --exclude=.*jar

@@ -1,15 +1,18 @@
 ---
 name: springboot3-postgres-rabbitmq-mvnw
 version: '1.0'
-description: Backend project that uses Maven, Java 8, Spring Boot 3, PostgreSQL, RabbitMQ
+description: Backend project that uses Maven, Java 21, Spring Boot 3, PostgreSQL, RabbitMQ, guava, OpenAPI
 tags: [ 'backend', 'maven', 'java', 'springboot' ]
 
 values:
   schema: ./parameters-schema.json
   defaults: ./parameters-defaults.yaml
 
-engine:
+generator:
   image: mustache-cli:local
   args:
     - --exclude=.*jar
 
+validator:
+  image: openjdk:21
+  command: ./mvnw clean install

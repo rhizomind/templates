@@ -1,6 +1,5 @@
 artifactId: picocli-native-template
 groupId: com.rhizomind.quickapp
 artifactVersion: 0.1-SNAPSHOT
-space: quickapp
 java-package: com.rhizomind.quickapp
 artifactName: Template for picocli app with support for GraalVM and native images

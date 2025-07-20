@@ -4,33 +4,23 @@
   "properties": {
     "artifactName": {
       "type": "string",
-      "title": "Long name of the artifact",
-      "form": true
+      "title": "Long name of the artifact"
     },
     "artifactId": {
       "type": "string",
-      "title": "Id of the artifact; name of a .jar file and dockerimage",
-      "form": true
+      "title": "Id of the artifact; name of a .jar file and dockerimage"
     },
     "groupId": {
       "type": "string",
-      "title": "groupId",
-      "form": true
+      "title": "groupId"
     },
     "artifactVersion": {
       "type": "string",
-      "title": "version",
-      "form": true
-    },
-    "space": {
-      "type": "string",
-      "title": "Rhizomind platform space name",
-      "form": true
+      "title": "version"
     },
     "java-package": {
       "type": "string",
-      "title": "package",
-      "form": true
+      "title": "package"
     }
   },
   "required": [
@@ -38,7 +28,6 @@
     "artifactId",
     "groupId",
     "artifactVersion",
-    "space",
     "java-package"
   ]
 }

@@ -14,6 +14,10 @@
       "type": "string",
       "title": "version"
     },
+    "account": {
+      "type": "string",
+      "title": "Rhizomind platform account name"
+    },
     "space": {
       "type": "string",
       "title": "Rhizomind platform space name"

@@ -3,6 +3,6 @@ artifactName: Must-has-all-libs starter for nestjs based component
 artifactId: nextjs-starter
 artifactVersion: "0.1"
 account: solidify
-space: quickapp
+space: qa
 gitConfigDir: git
 description: Nest TypeScript starter repository
