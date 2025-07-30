@@ -2,7 +2,11 @@
 name: springboot3-postgres-rabbitmq-mvnw
 version: '1.0'
 description: Backend project that uses Maven, Java 21, Spring Boot 3, PostgreSQL, RabbitMQ, guava, OpenAPI
-tags: [ 'backend', 'maven', 'java', 'springboot' ]
+tags:
+  - backend
+  - maven
+  - java
+  - springboot
 
 values:
   schema: ./parameters-schema.json

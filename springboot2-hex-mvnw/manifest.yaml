@@ -2,7 +2,13 @@
 name: springboot2-hex-mvnw
 version: '1.0'
 description: Multimodule template for HEXagonal springboot 2 app with REST & JPA
-tags: [ 'backend', 'maven', 'java', 'springboot', 'hexagonal', 'multimodule' ]
+tags:
+  - backend
+  - maven
+  - java
+  - springboot
+  - hexagonal
+  - multimodule
 
 values:
   schema: ./parameters-schema.json

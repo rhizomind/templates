@@ -1,18 +1,21 @@
+version: "3"
 services:
   postgres:
-    image: "postgres:16-alpine"
+    container_name: postgres
+    image: "postgres:10"
     ports:
-      - 5432:5432
+      - "5432:5432"
     volumes:
-      - ./postgresql/data:/var/lib/postgresql/data
+      - ./.docker-data/postgresql/data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER={{artifactId}}
-      - POSTGRES_PASSWORD={{artifactId}}
-      - POSTGRES_DB={{artifactId}}
+      - POSTGRES_PASSWORD=postgres
   pgadmin:
+    container_name: pgadmin
     image: dpage/pgadmin4
     ports:
       - 8432:80
+    volumes:
+      - ./.docker-data/pgadmin:/var/lib/pgadmin
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.pl
       - PGADMIN_DEFAULT_PASSWORD=admin

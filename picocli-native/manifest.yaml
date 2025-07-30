@@ -3,9 +3,9 @@ name: picocli-graalvm
 version: '1.0.0'
 description: GraalVM enabled picocli app
 tags:
-  - backend,
-  - maven,
-  - java,
+  - backend
+  - maven
+  - java
   - picocli
   - graalvm
   - native-image
