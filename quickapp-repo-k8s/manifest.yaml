@@ -1,0 +1,17 @@
+---
+name: quickapp-repo-k8s
+version: '1.0.0'
+description: Basic nginx+rsyncd combo configured to work as quickapp templates repository
+tags:
+  - kubernetes
+  - nginx
+  - rsyncd
+
+values:
+  schema: ./parameters-schema.json
+  defaults: ./parameters-defaults.yaml
+
+generator:
+  image: mustache-cli:local
+  args:
+    - --exclude=.*jar

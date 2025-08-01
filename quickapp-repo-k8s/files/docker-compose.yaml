@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - shared-data:/usr/share/nginx/html:rw
+    ports:
+      - "8081:80"
+    restart: always
+
+  rsync:
+    image: mickaelperrin/rsync-server:latest
+    environment:
+      - USERNAME=rsyncuser
+      - PASSWORD=rsyncpass
+      - VOLUME_PATH=/data
+      - VOLUME_NAME=data
+    volumes:
+      - shared-data:/data:rw
+    ports:
+      - "18873:873"
+    restart: always
+
+volumes:
+  shared-data:

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{name}}
+  namespace: {{namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{name}}
+  template:
+    metadata:
+      labels:
+        app: {{name}}
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:alpine
+          volumeMounts:
+            - name: shared-storage
+              mountPath: /usr/share/nginx/html
+          ports:
+            - containerPort: 80
+        - name: rsync
+          image: mickaelperrin/rsync-server:latest
+          env:
+            - name: USERNAME
+              value: {{rsyncuser}}
+            - name: PASSWORD
+              value: {{rsyncpass}}
+            - name: VOLUME_NAME
+              value: data
+            - name: VOLUME_PATH
+              value: /data
+          volumeMounts:
+            - name: shared-storage
+              mountPath: /data
+          ports:
+            - containerPort: 873
+      volumes:
+        - name: shared-storage
+          persistentVolumeClaim:
+            claimName: shared-storage

@@ -1,0 +1,5 @@
+domain: qa-repo.domain.com
+name: qa-repo
+namespace: qa-repo
+rsyncuser: rsyncuser
+rsyncpass: rsyncpass
