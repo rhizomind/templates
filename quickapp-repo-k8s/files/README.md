@@ -22,7 +22,7 @@ This setup includes:
 ### Uploading Files via `rsync`
 
 ```bash
-rsync -avz ./local-folder rsync://rsyncuser@localhost:873/data
+rsync -avz ./local-folder rsync://rsyncuser@localhost:18873/data
 ```
 
 Replace `localhost` with the Docker host IP if needed. The default username/password are defined in the `docker-compose.yml` file.
