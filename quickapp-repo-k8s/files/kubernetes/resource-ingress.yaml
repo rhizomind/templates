@@ -15,3 +15,7 @@ spec:
                 name: {{name}}-nginx
                 port:
                   number: 80
+  tls:
+    - hosts:
+        - {{domain}}
+      secretName: qa-repo-tls
